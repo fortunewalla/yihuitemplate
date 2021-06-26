@@ -29,7 +29,7 @@ fit2 = lm(y ~ 1 + x + I(x > 0.5) + I((x - 0.5) * (x > 0.5)))
 lines(x, fitted(fit2), lwd = 2, lty = 2)
 ```
 
-![plot of chunk linmod](https://assets.yihui.name/figures/cn/2012-04-30-break-points-in-regression/linmod-1.png)
+![plot of chunk linmod](https://assets.yihui.org/figures/cn/2012-04-30-break-points-in-regression/linmod-1.png)
 
 虚线线段的中间一段不应该被画出来，我偷了个懒画上去了，本来应该是间断的。连与不连，归根结底，只不过是回归设计阵要不要多一列的问题。这是线性回归中经典的模型比较问题，上面`fit2`是全模型，`fit1`是取消一个限制的模型，自由度之差为1，残差平方和之差除以1，再除以全模型的残差平方和除以相应自由度（88/96），就是F统计量，P值也就出来了。R里面所谓的`anova()`函数，就是干这事儿的：
 
@@ -54,7 +54,7 @@ anova(fit1, fit2)
 
 这里因为我们设计的真实模型就是两部分直线斜率和截距在0.5前后都不同，所以这里F检验高度显著，说明加上截距限制条件不合理。道理很简单：除非简约模型和全模型没有显著差异，我们只能认为全模型相对“好”一些。
 
-然而，线性模型本身就是对现实的简化。按照上面的想法，其实我们还需要看更复杂的全模型，否则不能认为线性模型就是合适的模型，比如可以考虑非线性模型。复杂模型是没有尽头的，如果要一个个检查下去，那大家都不用干活了。2008年我在COS写了一篇简单的[LOWESS文章](http://cos.name/2008/11/lowess-to-explore-bivariate-correlation-by-yihui/)，如今我仍然可以把它搬出来，因为LOWESS实在是回归模型中的战斗机，它是模型复杂与简约的很好平衡。前面的直线回归可以看作LOWESS的特例，如下`fit4`。我们可以构造一个相对复杂的LOWESS模型（`span`参数取小一些），然后和一个简单的模型比较，如：
+然而，线性模型本身就是对现实的简化。按照上面的想法，其实我们还需要看更复杂的全模型，否则不能认为线性模型就是合适的模型，比如可以考虑非线性模型。复杂模型是没有尽头的，如果要一个个检查下去，那大家都不用干活了。2008年我在COS写了一篇简单的[LOWESS文章](https://cosx.org/2008/11/lowess-to-explore-bivariate-correlation-by-yihui/)，如今我仍然可以把它搬出来，因为LOWESS实在是回归模型中的战斗机，它是模型复杂与简约的很好平衡。前面的直线回归可以看作LOWESS的特例，如下`fit4`。我们可以构造一个相对复杂的LOWESS模型（`span`参数取小一些），然后和一个简单的模型比较，如：
 
 
 ```r
@@ -67,7 +67,7 @@ lines(x, fitted(fit3), lwd = 2, col = 2)
 lines(x, fitted(fit4), lwd = 2, lty = 2)
 ```
 
-![plot of chunk loess-comparison](https://assets.yihui.name/figures/cn/2012-04-30-break-points-in-regression/loess-comparison-1.png)
+![plot of chunk loess-comparison](https://assets.yihui.org/figures/cn/2012-04-30-break-points-in-regression/loess-comparison-1.png)
 
 ```r
 anova(fit3, fit4)
@@ -98,13 +98,13 @@ library(ggplot2)
 qplot(x, y) + geom_smooth()  # 总趋势
 ```
 
-![plot of chunk loess](https://assets.yihui.name/figures/cn/2012-04-30-break-points-in-regression/loess-1.png)
+![plot of chunk loess](https://assets.yihui.org/figures/cn/2012-04-30-break-points-in-regression/loess-1.png)
 
 ```r
 qplot(x, y, group = x > 0.5) + geom_smooth()  # 按0.5前后分组
 ```
 
-![plot of chunk loess](https://assets.yihui.name/figures/cn/2012-04-30-break-points-in-regression/loess-2.png)
+![plot of chunk loess](https://assets.yihui.org/figures/cn/2012-04-30-break-points-in-regression/loess-2.png)
 
 显然所有数据放一条线上建模不合适。作为普通青年的我，到此就止步了（所以我离学术还十万八千里）。不过作为二青年想起一件事，如果不知道转折点，而靠不断推移转折点、新建模型、比较模型得来的转折点，是否有多重比较的嫌疑？比如先试0.2为转折点，再试0.3，……，一直试到0.9，看哪个模型跟全模型比起来没有显著差异。或者说，如果本来真实模型中不存在这样一个转折点，而通过这种方法找出转折点的概率有多大？我估计我八成问了一个很二的问题，应该早有人研究过了。做个模拟应该也不难。
 

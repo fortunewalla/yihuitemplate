@@ -13,8 +13,8 @@ This is quite an old problem in probability. For mathematical background,
 please refer to <http://en.wikipedia.org/wiki/Buffon's_needle> or
 <http://www.mste.uiuc.edu/reese/buffon/buffon.html>.
 
-`Needles' are denoted by segments on the 2D plane, and dropped randomly to
-check whether they cross the parallel lines. Through many times of `dropping'
+'Needles' are denoted by segments on the 2D plane, and dropped randomly to
+check whether they cross the parallel lines. Through many times of 'dropping'
 needles, the approximate value of `\(\pi\)` can be calculated out.
 
 There are three graphs made in each step: the top-left one is a simulation of
@@ -31,7 +31,7 @@ par(mar = c(3, 2.5, 0.5, 0.2), pch = 20, mgp = c(1.5, 0.5, 0))
 buffon.needle()
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/buffon-needle/demo-a.mp4?dl=1" /><p>plot of chunk demo-a</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/buffon-needle/demo-a.mp4" /><p>plot of chunk demo-a</p></video>
  
 
 ```r
@@ -40,4 +40,4 @@ ani.options(nmax = 400, 1)
 buffon.needle(redraw = FALSE)
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/buffon-needle/demo-b.mp4?dl=1" /><p>plot of chunk demo-b</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/buffon-needle/demo-b.mp4" /><p>plot of chunk demo-b</p></video>

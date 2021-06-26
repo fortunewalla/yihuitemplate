@@ -4,17 +4,13 @@ date: '2017-04-14'
 slug: jeff-leek-facts
 ---
 
-> **Note**: What other facts about Jeff Leek do you "know"? Please feel free to click the edit button <i class="fa fa-edit"></i> above and submit a pull request on Github, or tweet with the hashtag [#jeffleekfacts](https://twitter.com/hashtag/jeffleekfacts).
+> **Note**: What other facts about Jeff Leek do you "know"? Please feel free to click the link "Edit this page" in the navigation menu and submit a pull request on Github, or tweet with the hashtag [#jeffleekfacts](https://twitter.com/hashtag/jeffleekfacts).
 
 I have not written blog posts for quite a while. It is not because I don't have anything to write. On the contrary, I have a huge amount of things that I could have written about, e.g., how I collect and manage GIFs, and some stories behind the publication of the [bookdown book](https://bookdown.org/yihui/bookdown). A lot of things have happened since the last time I wrote a post here. I'll explain them later this year.
 
-Today I started this post only because I love memes and rumors (with no bad intentions), especially those about the guys behind [Simply Statistics](http://simplystatistics.org). These guys are a lot of fun. So Jeff Leek asked on Twitter the other day about an R interface to Alexa Skills (Cc'ed me probably because of my [Shiny Voice](https://yihui.shinyapps.io/voice) app).
+Today I started this post only because I love memes and rumors (with no bad intentions), especially those about the guys behind [Simply Statistics](http://simplystatistics.org). These guys are a lot of fun. So [Jeff Leek asked on Twitter](https://twitter.com/xieyihui/status/852205086956818432) the other day about an R interface to Alexa Skills (Cc'ed me probably because of my [Shiny Voice](https://yihui.shinyapps.io/voice) app).
 
-{{< tweet 852205086956818432 >}}
-
-I don't know anything about Alexa, but the funny thing was that rumors quickly emerged in the replies:
-
-{{< tweet 852294292928200704 >}}
+I don't know anything about Alexa, but the funny thing was that [rumors quickly emerged in the replies](https://twitter.com/xieyihui/status/852294292928200704).
 
 And I just wanted to collect these unknown "facts" about Jeff A-leek-sa:
 
@@ -68,7 +64,7 @@ And I just wanted to collect these unknown "facts" about Jeff A-leek-sa:
 
 - @brandenco: CRAN checks itself before it submits to Jeff Leek.
 
-- @BeEngelhardt: When Jeff Leek inverts a matrix, time actually reverses $O(n^3)$.
+- @BeEngelhardt: When Jeff Leek inverts a matrix, time actually reverses `$O(n^3)$`.
 
 - @michaelhoffman: Jeff Leek is the Uniformly Most Powerful Jeff.
 
@@ -92,4 +88,4 @@ And I just wanted to collect these unknown "facts" about Jeff A-leek-sa:
 
 I'm looking forward to yet more facts.
 
-![More](https://slides.yihui.name/gif/dog-reach.gif)
+![More](https://slides.yihui.org/gif/dog-reach.gif)

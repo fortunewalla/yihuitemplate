@@ -8,7 +8,7 @@ I feel unhappy, so I just decide to write something not-so-interesting.
 
 Everybody is using Structural Equation Models (SEM) in China as if it were shameful that you didn't construct SEMs in your paper. Again, few people know SEM theories -- not to say the computation issues. They don't care, because they know this is a so-called advanced tool. This morning I've talked about several ironic things about SEM in my speech. 
 
-![SEM Paths](https://db.yihui.name/space/sem-path.gif)
+![SEM Paths](https://db.yihui.org/space/sem-path.gif)
 
 The theory can be regarded as easy, though in fact it's not. The main idea is to develop a model with a theoretical covariance matrix ($\Sigma$) which is similar to the sample covariance matrix S. Therefore, how to minimize their discrepancy becomes the most critical part in parameter estimation. Common discrepancy functions can be derived through maximum likelihood (ML), unweighted least squares (ULS) and generalized least squares (GLS), etc. Take ML as an example, the discrepancy function is 
 
@@ -591,6 +591,6 @@ summary(sem.McArdle)
 
 Besides, you may draw your path diagram (see the function _path.diagram()_) via the graph-drawing program _dot_; see Koutsofios and North (2002) and <http://www.graphviz.org/> (also free & open-source).  Below is a diagram I draw in _dot_: 
 
-![](http://images.ruc.edu.cn/images/2007-04-23/1177328882173.gif)
+![](https://user-images.githubusercontent.com/163582/50353811-fcc59900-050e-11e9-8981-13f3ecc9d542.png)
 
 In the end, I believe the function _boot.sem() _is worth our attention. As the model is too complicated, it's natural to doubt its stability, so _bootstrapping _surely will be a good choice, which might be more reliable than the coefficients' standard errors directly computed under the assumption of multi-normality. Bear in mind that bootstrapping takes some time, so be patient.

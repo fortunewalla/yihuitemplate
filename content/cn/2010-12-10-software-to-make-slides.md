@@ -10,7 +10,7 @@ slug: software-to-make-slides
 
 挑剔有挑剔的好处，但也有坏处。挑剔最怕的就是对什么都挑剔，把任何事情都做到完美，陷于细节不能自拔。我对文档样式和拼写都比较挑剔，平日各家溜达也时不时发现一些好玩的事情。比如刚看到阮一峰网站上的袜子广告：
 
-![阮一峰网站上的袜子广告](https://db.yihui.name/imgur/h935BUF.jpg)
+![阮一峰网站上的袜子广告](https://db.yihui.org/imgur/h935BUF.jpg)
 
 它有个非常隐蔽的问题，估计也只有我这样无聊的人才会看到：We too是错误的写法，按照上下文，生搬硬套应该写作We neither，再顺一顺的话我觉得最好写作Neither do we。否定句中的“也”不应该是too。我向来反对无理由的口语/书面语中英文混杂（参见[微波炉不work故事](/cn/2010/09/brackets-and-chinese/)），这大概是避免中英文混杂的一个例证吧。话说回来，此处追究语法问题其实也没太大意义，因为中土大唐人士看到这句话肯定会正确理解它的意思，不会因为英文写得不对而不买袜子。
 
@@ -20,4 +20,4 @@ slug: software-to-make-slides
 
 注2：PPT不等价于幻灯片，它只是PowerPoint的缩写。这句话我重复了无数遍了。
 
-注3：说起LaTeX，最近突然发现Google[对我的网站生成了Sitelinks](http://www.google.com/search?hl=&q=%E8%B0%A2%E7%9B%8A%E8%BE%89&sourceid=navclient-ff&rlz=1B3GGLL_enUS393US394&ie=UTF-8&aq=3&oq=)，不关心搜索引擎优化的客观可能不知道这是什么意思或有什么意义；有时候用Google搜索一些关键词，搜索结果的第一条链接下会列出几条“站内链接”，这便叫做Sitelinks。例如搜索[统计之都](http://www.google.com/search?hl=&q=%E7%BB%9F%E8%AE%A1%E4%B9%8B%E9%83%BD&sourceid=navclient-ff&rlz=1B3GGLL_enUS393US394&ie=UTF-8)、[统计学论坛](http://www.google.com/search?hl=&q=%E7%BB%9F%E8%AE%A1%E5%AD%A6%E8%AE%BA%E5%9D%9B&sourceid=navclient-ff&rlz=1B3GGLL_enUS393US394&ie=UTF-8)等都会列出COS的一些站内链接。能让Google生成站内链接的网站，一般都是质量比较高（至少是搜索引擎优化做得比较好）的网站。有点王婆卖瓜的味道了，不过我要说的不是这件事，而是Google眼中的我——竟然链接之一是我的LaTeX标签。
+注3：说起LaTeX，最近突然发现Google[对我的网站生成了Sitelinks](http://www.google.com/search?hl=&q=%E8%B0%A2%E7%9B%8A%E8%BE%89&sourceid=navclient-ff&rlz=1B3GGLL_enUS393US394&ie=UTF-8&aq=3&oq=)，不关心搜索引擎优化的客官可能不知道这是什么意思或有什么意义；有时候用Google搜索一些关键词，搜索结果的第一条链接下会列出几条“站内链接”，这便叫做Sitelinks。例如搜索[统计之都](http://www.google.com/search?hl=&q=%E7%BB%9F%E8%AE%A1%E4%B9%8B%E9%83%BD&sourceid=navclient-ff&rlz=1B3GGLL_enUS393US394&ie=UTF-8)、[统计学论坛](http://www.google.com/search?hl=&q=%E7%BB%9F%E8%AE%A1%E5%AD%A6%E8%AE%BA%E5%9D%9B&sourceid=navclient-ff&rlz=1B3GGLL_enUS393US394&ie=UTF-8)等都会列出COS的一些站内链接。能让Google生成站内链接的网站，一般都是质量比较高（至少是搜索引擎优化做得比较好）的网站。有点王婆卖瓜的味道了，不过我要说的不是这件事，而是Google眼中的我——竟然链接之一是我的LaTeX标签。

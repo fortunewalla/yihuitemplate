@@ -1,18 +1,17 @@
-baseurl: "https://yihui.name/"
+baseurl: "https://yihui.org/"
 languageCode: "en-us"
 title: "Yihui Xie | 谢益辉"
-theme: "hugo-lithium-theme"
-googleAnalytics: "UA-1988641-2"
+theme: "hugo-ivy"
 disqusShortname: "yihui"
-ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 hasCJKLanguage: true
 enableEmoji: true
 footnotereturnlinkcontents: "↩"
-rssLimit: 30
+rssLimit: 100
 
 permalinks:
-  cn: "/cn/:year/:month/:slug/"
-  en: "/en/:year/:month/:slug/"
+  cn: "/:sections/:year/:month/:slug/"
+  en: "/:sections/:year/:month/:slug/"
 
 menu:
   main:
@@ -25,7 +24,7 @@ menu:
     - name: "关于"
       url: "/cn/about/"
       weight: 3
-    - name: "博客"
+    - name: "日志"
       url: "/cn/"
       weight: 4
   en:
@@ -41,9 +40,12 @@ menu:
     - name: "Vitae"
       url: "/en/vitae/"
       weight: 4
+    - name: "TODO"
+      url: "/todo/"
+      weight: 5
     - name: "中文"
       url: "/cn/"
-      weight: 5
+      weight: 6
   cn:
     - name: "首页"
       url: "/"
@@ -51,15 +53,21 @@ menu:
     - name: "关于"
       url: "/cn/about/"
       weight: 2
-    - name: "博客"
+    - name: "日志"
       url: "/cn/"
       weight: 3
     - name: "简历"
       url: "/cn/vitae/"
       weight: 4
+    - name: "菜谱"
+      url: "/cn/recipe/"
+      weight: 5
+    - name: "事务"
+      url: "/todo/"
+      weight: 7
     - name: "English"
       url: "/en/"
-      weight: 5
+      weight: 8
   knitr:
     - name: "Home"
       url: "/knitr/"
@@ -71,7 +79,7 @@ menu:
       url: "/knitr/hooks/"
       weight: 3
     - name: "Examples"
-      url: "/knitr/demos/"
+      url: "/knitr/demo/"
       weight: 4
     - name: "FAQ"
       url: "/knitr/faq/"
@@ -80,12 +88,15 @@ menu:
       pre: "github"
       url: "https://github.com/yihui/knitr"
       weight: 6
+    - name: "Yihui Xie"
+      url: "/"
+      weight: 7
   animation:
     - name: "Home"
       url: "/animation/"
       weight: 1
     - name: "Examples"
-      url: "/animation/examples/"
+      url: "/animation/example/"
       weight: 2
     - name: "Export"
       url: "/animation/export/"
@@ -97,35 +108,72 @@ menu:
       pre: "github"
       url: "https://github.com/yihui/animation"
       weight: 5
+    - name: "Yihui Xie"
+      url: "/"
+      weight: 6
+  tinytex:
+    - name: "Home"
+      url: "/tinytex/"
+      weight: 1
+    - name: "FAQs"
+      url: "/tinytex/faq/"
+      weight: 2
+    - name: "R package"
+      url: "/tinytex/r/"
+      weight: 3
+    - name: "Hall of Pain"
+      url: "/tinytex/pain/"
+      weight: 4
+    - name: "中文文档"
+      url: "/tinytex/cn/"
+      weight: 5
+    - name: "Github repo"
+      pre: "github"
+      url: "https://github.com/yihui/tinytex"
+      weight: 6
+    - name: "Yihui Xie"
+      url: "/"
+      weight: 7
 
 params:
   description: "Personal website of Yihui Xie; 谢益辉的个人网站"
-  disqusURL: "http://yihui.name"
-  dateFormat: "2006/01/02"
-  customCSS: ["css/custom.css"]
-  customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js"]
+  footer: "&copy; [Yihui Xie](/) 2005 - 2020"
+  disqusURL: "https://yihui.org"
+  customJS:
+    - "js/fix-toc.js"
+    - "js/center-img.js"
+    - "js/right-quote.js"
+    - "js/no-highlight.js"
+    - "js/fix-footnote.js"
+    - "js/math-code.js"
+    - "js/external-link.js"
+    - "js/alt-title.js"
+    - "js/header-link.js"
   githubContentURL: "https://github.com/rbind/yihui/edit/master/content/"
+  twitterImage: "/images/logo.png"
 
   # options for highlight.js (version, additional languages, and theme)
-  highlightjsVersion: "9.11.0"
-  highlightjsCDN: "//cdn.bootcss.com"
+  highlightjsVersion: "9.12.0"
+  highlightjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   highlightjsLang: ["r", "yaml", "tex"]
   highlightjsTheme: "github"
 
-  MathJaxVersion: "2.7.1"
-  MathJaxCDN: "//cdn.bootcss.com"
-
-  social:
-    twitter: "xieyihui"
-    weibo: "谢益辉"
-    weibo_url: "yihuixie"
-    github: "yihui"
-
   logo:
-    url: "logo.png"
-    width: 50
-    height: 50
-    alt: "Yihui Xie"
+    en:
+      img: "/images/logo.png"
+      url: "/"
+      alt: "Yihui Xie"
+      tag: ""
+    knitr:
+      img: "/knitr/images/knit-logo.png"
+      url: "/knitr/"
+      alt: "knitr logo"
+      tag: "knitr: elegant, flexible, and fast dynamic report generation with R"
+    tinytex:
+      img: "/images/logo-tinytex.png"
+      url: "/tinytex/"
+      alt: "tinytex logo"
+      tag: "TinyTeX: A lightweight and easy-to-maintain LaTeX distribution"
 
   author:
     en: "Yihui Xie"
@@ -134,8 +182,17 @@ params:
 
   lang:
     edit:
-      en: "Suggest an edit of this page"
-      cn: "编辑本页"
+      cn: "编辑"
+    license:
+      cn: "版权"
+    subscribe:
+      cn: "订阅"
 
 blackfriday:
     extensionsmask: ["noIntraEmphasis"]
+    fractions: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

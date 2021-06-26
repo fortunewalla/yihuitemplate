@@ -18,7 +18,7 @@ The selection procedure is like this:
 - Split the whole data randomly into `\(k\)` folds:
 - For the number of features `\(g = 1, 2, \cdots, g_{max}\)`, choose `\(g\)` features that have the largest discriminatory
 power (measured by the F-statistic in ANOVA):
-- For the fold `\(i\)` ($i = 1, 2, \cdots, k:
+- For the fold `\(i\)` ( `\(i = 1, 2, \cdots, k\)` ):
 - Train a LDA model without the `\(i\)`-th fold data, and predict with the `\(i\)`-th fold for a proportion of correct predictions `\(p_{gi}\)`;
 - Average the `\(k\)` proportions to get the correct rate `\(p_g\)`;
 - Determine the optimum number of features with the largest `\(p\)`.
@@ -40,6 +40,6 @@ cv.nfeaturesLDA(pch = 19)
 ## Loading required namespace: MASS
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/cv-nfeaturesLDA/demo-a.mp4?dl=1" /><p>plot of chunk demo-a</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/cv-nfeaturesLDA/demo-a.mp4" /><p>plot of chunk demo-a</p></video>
 
 This animation provides an illustration of the process of finding out the optimum number of variables using k-fold cross-validation in a linear discriminant analysis (LDA).

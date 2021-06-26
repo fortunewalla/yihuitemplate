@@ -11,7 +11,7 @@ build_one = function(io, external = FALSE)  {
   if (!blogdown:::require_rebuild(io[2], io[1])) return()
 
   if (local) message('* knitting ', io[1])
-  if (blogdown:::Rscript(shQuote(c('R/build_one.R', io, external))) != 0) {
+  if (xfun::Rscript(shQuote(c('R/build_one.R', io, external))) != 0) {
     unlink(io[2])
     stop('Failed to compile ', io[1], ' to ', io[2])
   }
@@ -23,25 +23,22 @@ files = cbind(as.matrix(files), external = TRUE)
 # Rmd files under the content directory
 rmds = list.files('content', '[.]Rmd$', recursive = TRUE, full.names = TRUE)
 if (length(rmds)) {
-  files = rbind(files, cbind(rmds, blogdown:::with_ext(rmds, '.md'), FALSE))
+  files = rbind(files, cbind(rmds, xfun::with_ext(rmds, '.md'), FALSE))
 }
 
 for (i in seq_len(nrow(files))) {
   build_one(unlist(files[i, 1:2]), files[i, 3])
 }
 
-# add https://assets.yihui.name to image/video URLs /figures/..., and add the
-# query param ?dl=1 so that mp4 works on Safari (picky about Range requests)
+# add https://assets.yihui.org to image/video URLs /figures/...
 if (!local && Sys.which('sed') != '') for (i in files[, 2]) {
   Sys.chmod(i, '644')  # unlock .md
   system2('sed', paste(
-    "-i '' -e 's@\\([(\"]\\)\\(/figures/\\)@\\1https://assets.yihui.name\\2@g'",
-    "-e 's@\\(/figures/[^.]*\\.mp4\\)\\([\")]\\)@\\1?dl=1\\2@g'", i
+    "-i '' -e 's@\\([(\"]\\)\\(/figures/\\)@\\1https://assets.yihui.org\\2@g'",
+    "-e 's@\\(/figures/[^.]*\\.mp4\\)\\([\")]\\)@\\1\\2@g'", i
   ))
   Sys.chmod(i, '444')  # lock .md again
 }
-
-blogdown:::hugo_build(local = local)
 
 if (!local) {
   message('Optimizing PNG files under static/')

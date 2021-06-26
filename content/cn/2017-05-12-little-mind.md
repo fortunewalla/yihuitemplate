@@ -20,11 +20,15 @@ slug: little-mind
 
 ---
 
-有人的地方就有江湖，这话的普适性太强了。比如我不止一次听说维基百科里某些编辑的政治斗争。人群聚集的地方总是会诞生政治，也是蛮烦的。另一个例子是 StackOverflow（缩写 SO）。我喜欢 SO 的一切，但唯有一点我是烦得要死，就是老资格用户对新手痛下杀手，那种积分是个位数的用户来提问，一看就是新手，问题问不好完全可以理解，但为什么不鼓励伊改进问题，而是上来就是给人把帖子关掉了呢？我已经见过好几次这样的情况了，比如：
+有人的地方就有江湖，这话的普适性太强了。比如我不止一次听说维基百科里某些编辑的政治斗争。人群聚集的地方总是会诞生政治，也是蛮烦的。另一个例子是 Stack Overflow（缩写 SO）。我喜欢 SO 的一切，但唯有一点我是烦得要死，就是老资格用户对新手痛下杀手，那种积分是个位数的用户来提问，一看就是新手，问题问不好完全可以理解，但为什么不鼓励伊改进问题，而是上来就是给人把帖子关掉了呢？我已经见过好几次这样的情况了，比如：
 
 - 问题 [Cannot run the codes in R](http://stackoverflow.com/q/43948823/559676) 发出来过了四个小时就被几个老资格用户投票关掉了。对不好的问题，我提倡鼓励用户学会问问题，而不是不由分说砍死他。哪怕你把问题撂在那儿不理会都比粗暴地关闭问题要好得多。
 
 - 又如 [RStudio blogdown generates empty “Posts” link on the top page](http://stackoverflow.com/q/43221765/559676) 问题发出来两个多小时就被[投票关闭](http://stackoverflow.com/posts/43221765/revisions)了，在我的强烈抗议下他们才又把它重新打开。我看关问题的这帮人连 blogdown 是什么都没闹明白。
+
+- 再如 [How to cite multiple papers in RMarkdown](https://stackoverflow.com/q/44767358/559676)，这个更夸张，发出来 5 分钟就被一个威望值高达十万的人投了关闭票，我去看了这个人的资料，他压根儿就不是 R 社区的人，我疑心他也是连 R Markdown 是什么都没搞清楚，就来横插一脚关闭别人的问题。
+
+- 再如 [Header continuing on an empty page of pdf latex output using r package bookdown](https://stackoverflow.com/q/44958234/559676)，又是一群人投票关闭。我看了其中一个人的资料，他自己三天的[提问](https://stackoverflow.com/q/44891342/559676)还被人标记为重复了，这么快就来教训新人了，而且他压根儿就不是 R 社区的人，我也怀疑他连 bookdown 是什么也不知道。
 
 就这么急于展示你们的虚拟权力吗。
 

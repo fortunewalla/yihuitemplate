@@ -1,35 +1,32 @@
 {{ partial "header.html" . }}
 
-<main class="content" role="main">
+{{ if .Content }}
+{{ .Content }}
+{{ end }}
+{{ if (or .Params.list_pages (not .Content)) }}
+<div class="archive">
+{{ if .Params.list_pages }}
+  {{ range .Pages.ByParam (or .Params.order_by "date" ) }}
+  <p>
+    <span>{{ .Date.Format "2006-01-02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title }} {{ with .Params.subtitle }}<span class='subtitle'> &middot; {{ . }} </span>{{ end }}</a>
+  </p>
+  {{ end }}
+{{ else }}
+  {{ range .Pages.GroupByDate "2006" }}
+  <h2 class="archive-title">{{ .Key }}</h2>
+  {{ range .Pages.GroupByDate "2006-01-02" }}
+  {{ range .Pages }}
+  <p>
+    <span>{{ .Date.Format "2006-01-02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </p>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+{{ end }}
 
-  {{ if .Content }}
-  {{ if .Params.show_title }}
-  {{ partial "article_meta.html" . }}
-  {{ end }}
-  <article class="article">
-    <div class="article-content">
-      {{ .Content }}
-    </div>
-  </article>
-  {{ else }}
-  <div class="archive">
-    {{ range .Pages.GroupByDate "2006" }}
-    <h2 class="archive-title">{{ .Key }}</h2>
-    {{ range .Pages }}
-    <article class="archive-item">
-      <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
-      <span class="archive-item-date">
-        {{ .Date.Format "2006/01/02" }}
-      </span>
-    </article>
-    {{ end }}
-    {{ end }}
-  </div>
-  {{ end }}
-  {{if and .Content (not .IsHome) }}
-  {{ partial "disqus.html" .}}
-  {{ end }}
-
-</main>
+</div>
+{{ end }}
 
 {{ partial "footer.html" . }}

@@ -4,9 +4,7 @@ date: '2013-06-10'
 slug: fix-typo-in-documentation
 ---
 
-> Update (2017/02/06): It is much easier to fix typos on my web pages now. There is a toolbar under the title of each post, and please hit the Edit button <i class="fa fa-edit" aria-hidden="true"></i> if you find any mistakes on the page to propose a correction through Github. You don't need to use any command-line tools. You should not follow the instructions in the post below any more (the **knitr** documentation has been moved to a different repo).
-
----
+> Update (2017/08/16): It is much easier to fix typos on my web pages now. There is a menu item "Edit this page" on each page. You can edit the source of a page if you find any mistakes, and propose a correction through a Github pull request. You don't need to use any command-line tools. You should not follow the instructions in the post below any more (the **knitr** documentation has been moved to a different repo).
 
 So I just got yet yet another
 [comment](/knitr/demo/sweave/#comment-924948061) saying
@@ -18,7 +16,7 @@ it possible for you to contribute to open source and fix obvious problems
 _with no questions being asked_ -- just do it yourself, and send the changes
 to the original author(s) through Github.
 
-![help me with Github pull requests](https://db.yihui.name/imgur/j9NYXiQ.png)
+![help me with Github pull requests](https://db.yihui.org/imgur/j9NYXiQ.png)
 
 The official documentation for Github pull requests is a little bit verbose
 for beginners. Basically what you need to do for simple tasks are:

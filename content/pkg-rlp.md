@@ -97,7 +97,7 @@ You certainly do not want to type these commands repeatedly. Unfortunately, due 
 So let's start hacking and find a button to click. I have been secretly hacking the `Build & Reload` button in my RStudio IDE for a long time. If you open this **rlp** package in RStudio, and go to `Tools -> Project Options -> Build Tools`, you will see a weird configuration:
 
 ```bash
--v && Rscript -e "Rd2roxygen::rab(install=TRUE,before=system('make'))"
+-v && Rscript -e "Rd2roxygen::rab(install=T,before=system('make'))"
 ```
 
 At this moment, I'm not going to explain what it means since it is just a dirty hack, and please do not ask me, either. Let's wait for the RStudio IDE to give us more freedom to customize the package build options in the future. If you are interested in the idea of LP for R packages, just copy my configuration, but bear in mind that it may stop working at some point. I will update this document when that happens.
@@ -105,7 +105,7 @@ At this moment, I'm not going to explain what it means since it is just a dirty 
 Note `Rd2roxygen::rab()` is my own way of building R packages, and you certainly do not have to follow it. For example, if you are more comfortable with **devtools**, you can do^[Remember to replace `rlp` with your package name.]:
 
 ```bash
--v && make -C rlp && Rscript -e "devtools::install('rlp',keep_source=T)"
+-v && make -C rlp && Rscript -e "devtools::install('rlp')"
 ```
 
 # Call Functions in This Package
@@ -240,7 +240,7 @@ c(a - z * s, a + z * s)  # a 95% CI
 ```
 
 ```
-## [1] 3.875568 6.726619
+## [1] 3.876 6.727
 ```
 
 Below is a histogram of the simulated data, with the true density curve, the true mean (solid vertical line), and the estimated mean (dashed line):^[The mean of the Gamma distribution is `\(\alpha/\beta\)`.]
@@ -253,7 +253,7 @@ curve(dgamma(x, shape = 5, rate = 2), 0, 6, add = TRUE, lwd = 2)
 abline(v = c(5/2, r$estimate[1]/r$estimate[2]), lty = c(1, 2))
 ```
 
-![plot of chunk dgamma](https://assets.yihui.name/figures/LP-demo1/dgamma-1.png)
+![plot of chunk dgamma](https://assets.yihui.org/figures/LP-demo1/dgamma-1.png)
 
 Now you see I can thoroughly explain an R function using LP. I'm not saying this is what you should do for all R functions, but sometimes there are cases in which you want something beyond code comments, such as math equations and graphics.
 
@@ -334,7 +334,7 @@ plot(z, pch = 20, col = 'darkgray')
 points(-1, 3, pch = 19, col = 'red', cex = 3)
 ```
 
-![plot of chunk binom-scatter](https://assets.yihui.name/figures/LP-demo1/binom-scatter-1.png)
+![plot of chunk binom-scatter](https://assets.yihui.org/figures/LP-demo1/binom-scatter-1.png)
 
 In this example, I factored out the code from the main function as two separate code chunks, and explained each later, instead of inserting the explanations in the middle of the function body. Again, the simulation code in this example is computationally inefficient, and it is only for demo purposes^[It is straightforward to make it much more efficient by vectorization, i.e., instead of using `replicate()`, which is basically a loop to generate one random number at a time, you can just generate all `n` random numbers in one step: `x = rnorm(n, m1, s1)`, and `y = rnorm(n, m2cond, s2cond)`.].
 

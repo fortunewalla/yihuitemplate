@@ -8,18 +8,17 @@ from_Rmd: yes
 
 For a long numeric vector or matrix (or data frame), we can plot only a
 subset of its elements to take a closer look at its structure. With a moving
-``block'' from the beginning to the end of a vector or matrix or any R
+'block' from the beginning to the end of a vector or matrix or any R
 objects to which we can apply `subset`, all elements inside the block
 are plotted as a line or scatter plot or any customized plots.
 
 For a vector, the elments from `i + 1` to `i + block` will be
-plotted in the i-th step; similarly for a matrix or data frame, a (scatter)
+plotted in the `i`-th step; similarly for a matrix or data frame, a (scatter)
 plot will be created from the `i + 1`-th row to `i + block`-th row.
 
 However, this function is not limited to scatter plots or lines -- we can
 customize the function `FUN` as we wish.
 
- 
 
 ```r
 library(animation)
@@ -36,7 +35,7 @@ moving.block(dat = cumsum(rnorm(300)), FUN = function(..., dat = dat,
 }, type = "o", pch = 20)
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/moving-block/demo-a.mp4?dl=1" /><p>plot of chunk demo-a</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/moving-block/demo-a.mp4" /><p>plot of chunk demo-a</p></video>
  
 
 ```r
@@ -51,7 +50,7 @@ moving.block(dat = HuSpeech, FUN = function(..., dat = dat, i = i,
 }, type = "o", pch = 20)
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/moving-block/demo-b.mp4?dl=1" /><p>plot of chunk demo-b</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/moving-block/demo-b.mp4" /><p>plot of chunk demo-b</p></video>
  
 
 ```r
@@ -77,7 +76,7 @@ moving.block(dat = sunspot.month, block = 132, FUN = function(...,
 ## adjust 'block' or ani.options('nmax')
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/moving-block/demo-c.mp4?dl=1" /><p>plot of chunk demo-c</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/moving-block/demo-c.mp4" /><p>plot of chunk demo-c</p></video>
 
  
 
@@ -96,4 +95,4 @@ moving.block(quakes[order(quakes$depth), c("long", "lat")], FUN = function(...,
 }, pch = 20, col = rgb(0, 0, 0, 0.5))
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/moving-block/demo-d.mp4?dl=1" /><p>plot of chunk demo-d</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/moving-block/demo-d.mp4" /><p>plot of chunk demo-d</p></video>
