@@ -2,6 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
-public
-static/figures
-blogdown
+/public
+/static/figures
+/static/hardlink
+/blogdown
+.hugo_build.lock
+.positai

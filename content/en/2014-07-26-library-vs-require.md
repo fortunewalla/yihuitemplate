@@ -4,9 +4,7 @@ date: '2014-07-26'
 slug: library-vs-require
 ---
 
-While I was sitting in a conference room at UseR! 2014, I started counting the number of times that `require()` was used in the presentations, and would rant about it after I counted to ten. With drums rolling, David won this little award (sorry, I did not really mean this to you).
-
-{{< tweet 484476578416455680 >}}
+While I was sitting in a conference room at UseR! 2014, I started counting the number of times that `require()` was used in the presentations, and would rant about it after I counted to ten. With drums rolling, [David won this little award](https://twitter.com/xieyihui/status/484476578416455680) (sorry, I did not really mean this to you).
 
 After I tweeted about it, some useRs seemed to be unhappy and asked me why. Both `require()` and `library()` can load (strictly speaking, _attach_) an R package. Why should not one use `require()`? The answer is pretty simple. If you take a look at the source code of `require` (use the source, Luke, as Martin Mächler mentioned in his invited talk), you will see that `require()` basically means "_try_ to load the package using `library()` and return a logical value indicating the success or failure". In other words, `library()` loads a package, and `require()` tries to load a package. So when you want to load a package, do you load a package or try to load a package? It should be crystal clear.
 
@@ -39,11 +37,11 @@ Then `if (!require('foo')) stop()` is basically "if you _failed_ to _try_ to _lo
 
 There is one legitimate reason to use `require()`, though, and that is, "require is a verb and library is a noun!" I completely agree. `require` should have been a very nice name to choose for the purpose of loading a package, but unfortunately... you know.
 
-If you take a look at the [StackOverflow question](http://stackoverflow.com/q/5595512/559676) on this, you will see a comment on "package vs library" was up-voted a lot of times. It used to make a lot of sense to me, but now I do not care as much as I did. There have been useRs (including me up to a certain point) desperately explaining the difference between the two terms _package_ and _library_, but somehow I think R's definition of a _library_ is indeed unusual, and the function `library()` makes the situation worse. Now I'm totally fine if anyone calls my packages "libraries", because I know what you mean.
+If you take a look at the [Stack Overflow question](http://stackoverflow.com/q/5595512/559676) on this, you will see a comment on "package vs library" was up-voted a lot of times. It used to make a lot of sense to me, but now I do not care as much as I did. There have been useRs (including me up to a certain point) desperately explaining the difference between the two terms _package_ and _library_, but somehow I think R's definition of a _library_ is indeed unusual, and the function `library()` makes the situation worse. Now I'm totally fine if anyone calls my packages "libraries", because I know what you mean.
 
 Karthik Ram [suggested](https://twitter.com/_inundata/status/493481266365607936) this GIF to express "Ah a new _library_, but _require_? [Noooooo](http://nooooooooooooooo.com)":
 
-![](https://db.yihui.name/imgur/wygGyI1.gif)
+![](https://db.yihui.org/imgur/wygGyI1.gif)
 
 Since you have read the source code, Luke, you may have found that you can abuse `require()` a bit, for example:
 
@@ -84,4 +82,4 @@ Loading required package: nnet
 
 So when I tell you to load a package, you tell me you are loading a package, as if you had heard me. Oh thank you!
 
-![](https://db.yihui.name/imgur/4ojz1sG.gif)
+![](https://db.yihui.org/imgur/4ojz1sG.gif)

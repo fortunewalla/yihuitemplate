@@ -1,18 +1,18 @@
-baseurl: "https://yihui.name/"
-languageCode: "en-us"
+baseurl: "https://yihui.org/"
+locale: "en-US"
 title: "Yihui Xie | 谢益辉"
-theme: "hugo-lithium-theme"
-googleAnalytics: "UA-1988641-2"
-disqusShortname: "yihui"
-ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+theme: "hugo-paged"
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 hasCJKLanguage: true
 enableEmoji: true
 footnotereturnlinkcontents: "↩"
-rssLimit: 30
+
+outputs:
+  home: [html, rss, json]
 
 permalinks:
-  cn: "/cn/:year/:month/:slug/"
-  en: "/en/:year/:month/:slug/"
+  cn: "/:sections/:year/:month/:slug/"
+  en: "/:sections/:year/:month/:slug/"
 
 menu:
   main:
@@ -25,7 +25,7 @@ menu:
     - name: "关于"
       url: "/cn/about/"
       weight: 3
-    - name: "博客"
+    - name: "日志"
       url: "/cn/"
       weight: 4
   en:
@@ -41,9 +41,15 @@ menu:
     - name: "Vitae"
       url: "/en/vitae/"
       weight: 4
+    - name: "Q&A"
+      url: "https://github.com/yihui/yihui.org/discussions"
+      weight: 5
+    - name: "Todo"
+      url: "/todo/"
+      weight: 6
     - name: "中文"
       url: "/cn/"
-      weight: 5
+      weight: 7
   cn:
     - name: "首页"
       url: "/"
@@ -51,15 +57,27 @@ menu:
     - name: "关于"
       url: "/cn/about/"
       weight: 2
-    - name: "博客"
+    - name: "日志"
       url: "/cn/"
       weight: 3
     - name: "简历"
       url: "/cn/vitae/"
       weight: 4
-    - name: "English"
-      url: "/en/"
+    - name: "提问"
+      url: "https://github.com/yihui/yihui.org/discussions"
       weight: 5
+    - name: "菜谱"
+      url: "/cn/recipe/"
+      weight: 6
+    - name: "孩童"
+      url: "/cn/kids/"
+      weight: 7
+    - name: "事务"
+      url: "/todo/"
+      weight: 8
+    - name: "EN"
+      url: "/en/"
+      weight: 9
   knitr:
     - name: "Home"
       url: "/knitr/"
@@ -71,21 +89,24 @@ menu:
       url: "/knitr/hooks/"
       weight: 3
     - name: "Examples"
-      url: "/knitr/demos/"
+      url: "/knitr/demo/"
       weight: 4
     - name: "FAQ"
       url: "/knitr/faq/"
       weight: 5
-    - name: "Github repo"
+    - name: "GitHub"
       pre: "github"
       url: "https://github.com/yihui/knitr"
       weight: 6
+    - name: "Yihui Xie"
+      url: "/"
+      weight: 7
   animation:
     - name: "Home"
       url: "/animation/"
       weight: 1
     - name: "Examples"
-      url: "/animation/examples/"
+      url: "/animation/example/"
       weight: 2
     - name: "Export"
       url: "/animation/export/"
@@ -93,39 +114,64 @@ menu:
     - name: "Resources"
       url: "/animation/resources/"
       weight: 4
-    - name: "Github repo"
+    - name: "GitHub"
       pre: "github"
       url: "https://github.com/yihui/animation"
       weight: 5
+    - name: "Yihui Xie"
+      url: "/"
+      weight: 6
+  tinytex:
+    - name: "Home"
+      url: "/tinytex/"
+      weight: 1
+    - name: "FAQ"
+      url: "/tinytex/faq/"
+      weight: 2
+    - name: "R package"
+      url: "/tinytex/r/"
+      weight: 3
+    - name: "Hall of Pain"
+      url: "/tinytex/pain/"
+      weight: 4
+    - name: "中文文档"
+      url: "/tinytex/cn/"
+      weight: 5
+    - name: "GitHub"
+      pre: "github"
+      url: "https://github.com/rstudio/tinytex"
+      weight: 6
+    - name: "Yihui Xie"
+      url: "/"
+      weight: 7
 
 params:
   description: "Personal website of Yihui Xie; 谢益辉的个人网站"
-  disqusURL: "http://yihui.name"
-  dateFormat: "2006/01/02"
-  customCSS: ["css/custom.css"]
-  customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js"]
-  githubContentURL: "https://github.com/rbind/yihui/edit/master/content/"
-
-  # options for highlight.js (version, additional languages, and theme)
-  highlightjsVersion: "9.11.0"
-  highlightjsCDN: "//cdn.bootcss.com"
-  highlightjsLang: ["r", "yaml", "tex"]
-  highlightjsTheme: "github"
-
-  MathJaxVersion: "2.7.1"
-  MathJaxCDN: "//cdn.bootcss.com"
-
-  social:
-    twitter: "xieyihui"
-    weibo: "谢益辉"
-    weibo_url: "yihuixie"
-    github: "yihui"
+  footer: "&copy; [Yihui Xie](/) 2001 - {Year}"
+  customJS:
+    - "comment-utils.js"
+    - "hash-notes.js"
+    - "toggle-notes.js"
+    - "post-nav.js"
+    - "pages.js"
+  customCSS:
+    - "pages.css"
+  githubContentURL: "https://github.com/yihui/yihui.org/edit/master/content/"
+  twitterImage: "/images/logo.png"
 
   logo:
-    url: "logo.png"
-    width: 50
-    height: 50
-    alt: "Yihui Xie"
+    en:
+      img: "/images/logo.png"
+      url: "/"
+      alt: "Yihui Xie"
+    knitr:
+      img: "/knitr/images/knit-logo.png"
+      url: "/knitr/"
+      alt: "knitr logo"
+    tinytex:
+      img: "/images/logo-tinytex.png"
+      url: "/tinytex/"
+      alt: "tinytex logo"
 
   author:
     en: "Yihui Xie"
@@ -134,8 +180,26 @@ params:
 
   lang:
     edit:
-      en: "Suggest an edit of this page"
-      cn: "编辑本页"
+      cn: "编辑"
+    license:
+      cn: "版权"
+    subscribe:
+      cn: "订阅"
+    search:
+      cn: "搜索"
+    top:
+      cn: "登顶"
 
-blackfriday:
-    extensionsmask: ["noIntraEmphasis"]
+security:
+  allowContent: ['.*']
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      autoHeadingIDType: blackfriday
+  tableOfContents:
+    startLevel: 1

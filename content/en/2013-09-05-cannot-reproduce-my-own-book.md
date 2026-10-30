@@ -7,7 +7,7 @@ slug: cannot-reproduce-my-own-book
 > TL;DR I thought I could easily jump to a high standard (reproducibility), but I
   failed.
 
-![](https://db.yihui.name/imgur/niyXcfk.gif)
+![](https://db.yihui.org/imgur/niyXcfk.gif)
 
 Some of you may have noticed that the knitr book is finally out. [Amazon is
 offering a good price](http://www.amazon.com/gp/product/1482203537) at the
@@ -22,7 +22,7 @@ Three months later, several things have changed, and I could not reproduce
 the book, but that did not surprise me. I'll explain the details later. Here
 I have extracted the first three chapters, and released the corresponding
 source files in the [knitr-book](https://github.com/yihui/knitr-book)
-repository on Github. You can also find the link to download the PDF there.
+repository on GitHub. You can also find the link to download the PDF there.
 This repository may be useful to those who plan to write a book using R.
 
 What I could not reproduce were not really important. The major change in

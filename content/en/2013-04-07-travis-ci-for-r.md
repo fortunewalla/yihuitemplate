@@ -13,16 +13,18 @@ I have a good solution for 2, which is to keep silent when your submission passe
 
 The key is, do not argue. Silence is gold.
 
-![You shall not pass](https://db.yihui.name/imgur/3mdv0k9.jpg)
+![You shall not pass](https://db.yihui.org/imgur/3mdv0k9.jpg)
 
 The CRAN maintainers have been volunteering their time, and we should respect them. The question is, will this approach scale well with the growth of packages? Or who should be in charge of `R CMD check`?
 
 We, the poor authors, cannot guaranttee that every time our packages can pass CRAN's machines due to all kinds of reasons. Some problems are actually easy to fix without a real human yelling at us. On the other hand, if the package fortunately passes `R CMD check`, we do not really need an email from a real human acknowledging "thanks, on CRAN now".
 
-[Travis CI](https://travis-ci.org/) is an excellent platform for continuous integration of software packages. You do not need to interact with a real person by email -- each time you push to Github, your package will be automatically built and checked. If there are problems, you will be notified automatically.
+[Travis CI](https://travis-ci.org/) is an excellent platform for continuous integration of software packages. You do not need to interact with a real person by email -- each time you push to GitHub, your package will be automatically built and checked. If there are problems, you will be notified automatically.
 
 A similar platform in the R world is [Bioconductor](http://bioconductor.org/checkResults/). It has the best two components in software development: version control (although sadly SVN) and continuous checking. I do not know if CRAN will catch up one day. I'm not very optimistic about it; perhaps a more realistic approach is to start a Google Summer of Code project on introducing R into Travis CI. I have no idea how difficult that will be, but I will definitely be thrilled if it comes true this year.
 
 Anyone?
 
-> Update on 04/16/2013: just to clarify, what Bioconductor does is not strictly continuous integration (yet) in the sense that it builds packages daily instead of immediately on changes.
+Update on 2013-04-16
+
+:   Just to clarify, what Bioconductor does is not strictly continuous integration (yet) in the sense that it builds packages daily instead of immediately on changes.

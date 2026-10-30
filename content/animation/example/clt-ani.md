@@ -29,7 +29,7 @@ op = par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
 clt.ani(type = "s")
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/clt-ani/demo-a.mp4?dl=1" /><p>plot of chunk demo-a</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/clt-ani/demo-a.mp4" /><p>plot of chunk demo-a</p></video>
 
 ```r
 par(op)
@@ -39,10 +39,9 @@ par(op)
  
 
 ```r
-## other distributions: Chi-square with df = 5 (mean = df, var
-## = 2*df)
+## other distributions: Chi-square with df = 5 (mean = df, var = 2*df)
 f = function(n) rchisq(n, 5)
 clt.ani(FUN = f, mean = 5, sd = sqrt(2 * 5))
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/clt-ani/demo-b.mp4?dl=1" /><p>plot of chunk demo-b</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/clt-ani/demo-b.mp4" /><p>plot of chunk demo-b</p></video>

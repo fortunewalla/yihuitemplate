@@ -7,25 +7,25 @@ slug: cold-joke-on-163-mailbox
 三更半夜我来讲个冷笑话。昨天给一位同学回邮件，由于邮件太长，每个段落的主题不一样，这种情况下我一般会把我的回复插在对方邮件的每一段话下面。猛打字，猛打字，猛打字……最后发出去的邮件大致样子是这样的：
 
 > > 问题讨论一
-
+> > 
 > 好嘛，我的意见一，不拉不拉……
-
+> 
 > > 问题讨论二
-
+> > 
 > 啊哈，我的意见二，咕叽咕叽……
-
+> 
 > ……
 
 > > `________________________________`  
 > 您想拥有和网易免费邮箱一样强大的软件吗？
-
+> 
 > 我不想，谢谢。
-
+> 
 > Regards,  
 Yihui  
 \-\-\-  
 Yihui Xie <***@gmail.com>  
-Phone: 515-294-2465 Web: http://yihui.name  
+Phone: 515-294-2465 Web: http://yihui.org  
 Department of Statistics, Iowa State University  
 2215 Snedecor Hall, Ames, IA
 

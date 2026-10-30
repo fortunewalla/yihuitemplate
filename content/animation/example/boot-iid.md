@@ -24,23 +24,21 @@ statistic and plotting its distribution based on bootstrapping.
 ```r
 library(animation)
 ## bootstrap for 20 random numbers from U(0, 1)
-par(mar = c(1.5, 3, 1, 0.1), cex.lab = 0.8, cex.axis = 0.8, mgp = c(2, 
-  0.5, 0), tcl = -0.3)
+par(mar = c(1.5, 3, 1, 0.1), cex.lab = 0.8, cex.axis = 0.8, mgp = c(2, 0.5, 0), tcl = -0.3)
 ani.options(nmax = 50)
 ## don't want the titles
 boot.iid(main = c("", ""))
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/boot-iid/demo-a.mp4?dl=1" /><p>plot of chunk demo-a</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/boot-iid/demo-a.mp4" /><p>plot of chunk demo-a</p></video>
 
 
 ```r
 ## for the median of 15 points from chi-square(5)
-boot.iid(x = rchisq(15, 5), statistic = median, main = c("", 
-  ""))
+boot.iid(x = rchisq(15, 5), statistic = median, main = c("", ""))
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/boot-iid/demo-b.mp4?dl=1" /><p>plot of chunk demo-b</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/boot-iid/demo-b.mp4" /><p>plot of chunk demo-b</p></video>
 
 
 ```r
@@ -49,4 +47,4 @@ par(mar = c(1.5, 3, 2.5, 0.1), cex.main = 1)
 boot.iid(heights = c(1, 2))
 ```
 
-<video controls loop autoplay><source src="https://assets.yihui.name/figures/animation/example/boot-iid/demo-c.mp4?dl=1" /><p>plot of chunk demo-c</p></video>
+<video controls loop autoplay><source src="https://assets.yihui.org/figures/animation/example/boot-iid/demo-c.mp4" /><p>plot of chunk demo-c</p></video>
